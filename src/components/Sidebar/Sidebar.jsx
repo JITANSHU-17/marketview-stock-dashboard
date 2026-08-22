@@ -1,7 +1,11 @@
 import { BarChart3 } from "lucide-react";
 import CompanyList from "./CompanyList";
 
-function Sidebar({ companies }) {
+function Sidebar({
+  companies,
+  selectedSymbol,
+  onSelectCompany,
+}) {
   return (
     <aside className="flex h-full w-full flex-col border-r border-slate-800 bg-slate-950 lg:w-72">
       {/* Brand */}
@@ -29,7 +33,11 @@ function Sidebar({ companies }) {
           </p>
         </div>
 
-        <CompanyList companies={companies} />
+        <CompanyList
+          companies={companies}
+          selectedSymbol={selectedSymbol}
+          onSelectCompany={onSelectCompany}
+        />
       </div>
 
       {/* Footer */}
