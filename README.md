@@ -52,3 +52,17 @@ src/
 ├── App.jsx
 ├── index.css
 └── main.jsx
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Search
+
+![Search](screenshots/search.png)
+
+### Mobile
+
+![Mobile](screenshots/mobile_view.png)
