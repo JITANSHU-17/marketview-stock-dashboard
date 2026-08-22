@@ -50,10 +50,11 @@ function StockChart({ data }) {
 
           <Tooltip
             contentStyle={{
-              backgroundColor: "#0f172a",
-              border: "1px solid #1e293b",
-              borderRadius: "8px",
-              color: "#ffffff",
+                backgroundColor: "#020617",
+                border: "1px solid #334155",
+                borderRadius: "10px",
+                color: "#ffffff",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
             }}
             labelStyle={{
               color: "#94a3b8",

@@ -12,11 +12,11 @@ function CompanyList({
           <button
             key={company.symbol}
             onClick={() => onSelectCompany(company.symbol)}
-            className={`flex w-full items-center justify-between rounded-lg px-3 py-3 text-left transition ${
-              isSelected
-                ? "bg-blue-600/15 ring-1 ring-blue-500/30"
-                : "hover:bg-slate-800"
-            }`}
+            className={`group flex w-full items-center justify-between rounded-lg border px-3 py-3 text-left transition focus:outline-none focus:ring-2 focus:ring-blue-500/40 ${
+                isSelected
+                    ? "border-blue-500/30 bg-blue-500/10"
+                    : "border-transparent hover:border-slate-800 hover:bg-slate-900"
+                }`}
           >
             <div>
               <p

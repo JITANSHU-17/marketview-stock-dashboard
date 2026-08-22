@@ -8,7 +8,8 @@ const timeframes = ["1D", "1W", "1M", "6M", "1Y"];
 function Dashboard({ company }) {
   const [timeframe, setTimeframe] = useState("1M");
 
-  const chartData = company.history[timeframe];
+  const chartData =
+  company.history[timeframe] || company.history["1M"];
 
   return (
     <main className="flex min-w-0 flex-1 flex-col bg-slate-950">
@@ -51,8 +52,14 @@ function Dashboard({ company }) {
           </div>
 
           {/* Chart */}
-          <div className="p-6">
-  <StockChart data={chartData} />
+          <div className="p-6" aria-label={`${company.name} stock price chart`}>
+            
+          <div
+            role="img"
+            aria-label={`${company.name} stock price chart for ${timeframe}`}
+            >
+            <StockChart data={chartData} />
+            </div>
 
   <div className="mt-6">
     <MarketStats company={company} />
