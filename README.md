@@ -52,6 +52,7 @@ src/
 ├── App.jsx
 ├── index.css
 └── main.jsx
+```
 
 ## Screenshots
 
