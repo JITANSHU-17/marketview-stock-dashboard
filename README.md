@@ -6,7 +6,7 @@ MarketView is a responsive React-based stock dashboard that allows users to brow
 
 ## Live Demo
 
-Add your deployed URL here.
+https://marketviewdemo.netlify.app/
 
 ## Features
 
