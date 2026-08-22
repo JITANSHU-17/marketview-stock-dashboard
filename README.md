@@ -1,23 +1,25 @@
-# MarketView
+# MarketView — Interactive Stock Dashboard
 
-Interactive stock market dashboard built with React.
+MarketView is a responsive React-based stock dashboard that allows users to browse companies, search by company name or ticker symbol, and visualize historical stock prices using interactive charts.
 
-## Problem
+> This project uses mock stock market data for demonstration purposes.
 
-Build a webpage listing companies on the left panel.
-When a company is selected, display its relevant stock
-price information and historical price chart.
+## Live Demo
 
-## Planned Features
+Add your deployed URL here.
 
-- Company sidebar
-- Company selection
-- Interactive stock chart
-- Multiple time ranges
-- Company search
-- Market statistics
-- Responsive design
-- Mock stock data
+## Features
+
+- Browse companies from a sidebar
+- Search companies by name or ticker symbol
+- Select a company dynamically
+- View current mock stock information
+- Interactive historical price chart
+- Switch between multiple timeframes
+- View market statistics
+- Responsive desktop and mobile layout
+- Empty states for unavailable data
+- Keyboard-friendly interactive elements
 
 ## Tech Stack
 
@@ -27,7 +29,26 @@ price information and historical price chart.
 - Tailwind CSS
 - Recharts
 - Lucide React
+- Git & GitHub
 
-## Development Status
+## Project Structure
 
-🚧 In development
+```text
+src/
+├── components/
+│   ├── Sidebar/
+│   │   ├── Sidebar.jsx
+│   │   └── CompanyList.jsx
+│   │
+│   └── Dashboard/
+│       ├── Dashboard.jsx
+│       ├── StockHeader.jsx
+│       ├── StockChart.jsx
+│       └── MarketStats.jsx
+│
+├── data/
+│   └── stocks.js
+│
+├── App.jsx
+├── index.css
+└── main.jsx

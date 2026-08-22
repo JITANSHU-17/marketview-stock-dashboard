@@ -9,6 +9,22 @@ import {
 } from "recharts";
 
 function StockChart({ data }) {
+  if (!data || data.length === 0) {
+    return (
+      <div className="flex h-[400px] items-center justify-center">
+        <div className="text-center">
+          <p className="text-sm font-medium text-slate-400">
+            No chart data available
+          </p>
+
+          <p className="mt-1 text-xs text-slate-600">
+            Try another timeframe.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="h-[400px] w-full">
       <ResponsiveContainer width="100%" height="100%">
@@ -50,11 +66,11 @@ function StockChart({ data }) {
 
           <Tooltip
             contentStyle={{
-                backgroundColor: "#020617",
-                border: "1px solid #334155",
-                borderRadius: "10px",
-                color: "#ffffff",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+              backgroundColor: "#020617",
+              border: "1px solid #334155",
+              borderRadius: "10px",
+              color: "#ffffff",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
             }}
             labelStyle={{
               color: "#94a3b8",
