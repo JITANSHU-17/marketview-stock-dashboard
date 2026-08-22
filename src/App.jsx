@@ -1,31 +1,18 @@
 import { companies } from "./data/stocks";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
+  const selectedCompany = companies[0];
+
   return (
-    <div className="min-h-screen bg-slate-950 p-8 text-white">
-      <h1 className="mb-6 text-3xl font-bold">
-        MarketView
-      </h1>
+    <div className="flex min-h-screen flex-col bg-slate-950 text-white lg:flex-row">
+      <div className="w-full lg:h-screen lg:w-72 lg:shrink-0">
+        <Sidebar companies={companies} />
+      </div>
 
-      <div className="space-y-3">
-        {companies.map((company) => (
-          <div
-            key={company.symbol}
-            className="rounded-lg border border-slate-800 p-4"
-          >
-            <p className="font-semibold">
-              {company.name}
-            </p>
-
-            <p className="text-slate-400">
-              {company.symbol}
-            </p>
-
-            <p className="mt-2 text-sm text-slate-400">
-  1M data points: {company.history["1M"].length}
-</p>
-          </div>
-        ))}
+      <div className="flex min-w-0 flex-1">
+        <Dashboard company={selectedCompany} />
       </div>
     </div>
   );
